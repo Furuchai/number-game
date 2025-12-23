@@ -20,11 +20,11 @@ function checkGuess() {
 
     // 判定ロジック (Pythonの if/elif/else と同じ)
     if (userGuess === randomNumber) {
-        message.textContent = '正解！おめでとうございます！';
+        message.textContent = '正解！おめでとうございます！ブラウザの”更新”ボタンで再挑戦できます。';
         message.style.color = 'green';
         setGameOver(); // ゲーム終了処理へ
-    } else if (guessCount === 10) {
-        message.textContent = 'ゲームオーバー！正解は ' + randomNumber + ' でした。';
+    } else if (guessCount === 6) {
+        message.textContent = 'ゲームオーバー！正解は ' + randomNumber + ' でした。ブラウザの”更新”ボタンで再挑戦できます。';
         setGameOver();
     } else {
         // 間違いの場合
